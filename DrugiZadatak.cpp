@@ -17,12 +17,9 @@ int main() {
     
     cout << "inicijali: " << imePrezime[0] << ".";
 
-    for (int i{}; i < imePrezime.length(); i++) {
-        if (imePrezime[i] == ' ') {
-            cout << imePrezime[i + 1] << ".";
-            break;
-        }
-    }
+for (char znak : imePrezime) {
+    cout << znak;
+}
 
     
     int brojZnakova{};
