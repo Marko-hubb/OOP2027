@@ -14,16 +14,18 @@ int main() {
     cout << "ime i prezime: ";
     getline(cin, imePrezime);
 
-    int razmak = imePrezime.find(' ');
-
-    if (razmak != string::npos) {
-        cout << imePrezime[razmak + 1] << ".";
-    }
+bool pocetak = true;
 
 for (char znak : imePrezime) {
-    cout << znak;
-}
+    if (pocetak && znak != ' ') {
+        cout << znak << ".";
+        pocetak = false;
+    }
 
+    if (znak == ' ') {
+        pocetak = true;
+    }
+}
     
     int brojZnakova{};
 
