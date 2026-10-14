@@ -14,18 +14,18 @@ int main() {
     cout << "ime i prezime: ";
     getline(cin, imePrezime);
 
-bool pocetak = true;
+cout << "inicijali: ";
+bool novaRijec = true;
 
 for (char znak : imePrezime) {
-    if (pocetak && znak != ' ') {
-        cout << znak << ".";
-        pocetak = false;
-    }
-
     if (znak == ' ') {
-        pocetak = true;
+        novaRijec = true;
+    } else if (novaRijec) {
+        cout << znak << ".";
+        novaRijec = false;
     }
 }
+cout << endl;
     
     int brojZnakova{};
 
