@@ -14,8 +14,11 @@ int main() {
     cout << "ime i prezime: ";
     getline(cin, imePrezime);
 
-    
-    cout << "inicijali: " << imePrezime[0] << ".";
+    int razmak = imePrezime.find(' ');
+
+    if (razmak != string::npos) {
+        cout << imePrezime[razmak + 1] << ".";
+    }
 
 for (char znak : imePrezime) {
     cout << znak;
